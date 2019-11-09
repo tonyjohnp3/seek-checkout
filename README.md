@@ -13,7 +13,7 @@ Run yarn/npm test
 Map of Ad Ids to rule in below format
 
 Map(
-  AdId1 => {
+  AdName => {
     type: 'discountAmount' | 'bulkPriceFor'
     amount: number
     priceFor: number
@@ -23,3 +23,23 @@ Map(
   .
   .
 )
+
+Eg: 
+- Premium Ad => {
+    type: RuleType.DiscountAmount,
+    amount: 5
+  },
+  Standout Ad => {
+    type: RuleType.BulkFor,
+    priceFor: 4,
+    quantity: 5 
+  }
+- Standout Ad => {
+    type: RuleType.DiscountAmount,
+    amount: 23
+  }
+- Classic Ad => {
+    type: RuleType.BulkFor,
+    priceFor: 2,
+    quantity: 3 
+  }
